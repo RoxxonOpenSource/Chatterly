@@ -65,21 +65,21 @@ class LinkFooter extends React.PureComponent {
     }
 
     if (!limitedFederationMode) {
-      items.push(<a key='about' href='/about/more' target='_blank'><FormattedMessage id='navigation_bar.info' defaultMessage='About this server' /></a>);
+      items.push(<a key='about' href='/about/more' target='_blank'><FormattedMessage id='navigation_bar.info' defaultMessage='About Chatterly' /></a>);
     }
 
     if (profileDirectory) {
       items.push(<Link key='directory' to='/directory'><FormattedMessage id='getting_started.directory' defaultMessage='Profile directory' /></Link>);
     }
 
-    items.push(<a key='apps' href='https://joinmastodon.org/apps' target='_blank'><FormattedMessage id='navigation_bar.apps' defaultMessage='Mobile apps' /></a>);
-    items.push(<a key='privacy-policy' href='/privacy-policy' target='_blank'><FormattedMessage id='getting_started.privacy_policy' defaultMessage='Privacy Policy' /></a>);
+    items.push(<a key='apps' href='https://go.roxxon.org/chatterlymobile' target='_blank'><FormattedMessage id='navigation_bar.apps' defaultMessage='Mobile apps' /></a>);
+    items.push(<a key='privacy-policy' href='https://chatterly.roxxonlegal.com/privacy' target='_blank'><FormattedMessage id='getting_started.privacy_policy' defaultMessage='Privacy Policy' /></a>);
 
     if (signedIn) {
       items.push(<a key='developers' href='/settings/applications' target='_blank'><FormattedMessage id='getting_started.developers' defaultMessage='Developers' /></a>);
     }
 
-    items.push(<a key='docs' href='https://docs.joinmastodon.org' target='_blank'><FormattedMessage id='getting_started.documentation' defaultMessage='Documentation' /></a>);
+    items.push(<a key='docs' href='https://developers.chatterly.me' target='_blank'><FormattedMessage id='getting_started.documentation' defaultMessage='Documentation' /></a>);
 
     if (signedIn) {
       items.push(<a key='logout' href='/auth/sign_out' onClick={this.handleLogoutClick}><FormattedMessage id='navigation_bar.logout' defaultMessage='Logout' /></a>);
@@ -94,7 +94,7 @@ class LinkFooter extends React.PureComponent {
         <p>
           <FormattedMessage
             id='getting_started.open_source_notice'
-            defaultMessage='Mastodon is open source software. You can contribute or report issues on GitHub at {github}.'
+            defaultMessage='Chatterly is open source software. You can contribute or report issues on GitHub at {github}.'
             values={{ github: <span><a href={source_url} rel='noopener noreferrer' target='_blank'>{repository}</a> (v{version})</span> }}
           />
         </p>
